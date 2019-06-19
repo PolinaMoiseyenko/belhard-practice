@@ -1,0 +1,63 @@
+/* Variable declarations */
+
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+
+
+:root {
+    --main-font-family: 'Abel', sans-serif;
+    --font-size: 1rem;
+    --font-style: normal;
+    --link-font-style: italic;
+    --line-height: 1.5;
+
+    --background-color: #fff5bf;
+    --header-color: #417243;
+    --text-color: #131313;
+    --link-hover-color: #43d9df;
+    --white-color: #ffffff;
+
+    --block-margin: 20px 0;
+    --block-padding: 20px 40px;
+    --plain-border: 1px solid #686868;
+
+    --photo-size: 200px;
+    --photo-border-radius: 50%;
+    --photo-border: none;
+    --photo-border-color: #ffffff;
+}
+
+p {
+    --text-align: justify;    
+}
+
+button {
+    --btn-width: 90px;
+    --btn-height: 40px;    
+    --btn-border-radius: 7px; 
+    --btn-border: none;   
+    --btn-font-size: 16px;
+
+    --btn-color: #589e5e;
+    --btn-color-hover: #638564;
+    --alert-color: #f34e4e;
+    --alert-color-hover: #9b6060;
+    --disabled-color: #686868;    
+    --disabled-color-hover: #444444;
+
+    --btn-box-shadow: 2px 2px 4px 2px #79797985;
+}
+
+.wrapper {
+    --wrapper-margin: 0 auto;
+}
+
+table {
+    --table-padding: 7px 20px;
+    --table-border-collapse: collapse;
+
+    --table-background-color: #ffffff;
+    --table-row-color: #ecececa2;
+    --table-row-color-hover:  rgba(165, 228, 173, 0.5);
+    --table-header-color: #4e7a54;
+    --table-box-shadow: 2px 2px 5px 3px #79797985;
+}

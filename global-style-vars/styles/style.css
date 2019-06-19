@@ -1,0 +1,136 @@
+@import url(./global-variables.css);
+
+body {
+    margin: 0;
+    font-family: var(--main-font-family);
+}
+
+.wrapper {
+    margin: var(--wrapper-margin);
+    padding: var(--block-padding);
+    width: 900px;
+    background-color: var(--background-color);
+}
+
+h1 {
+    color: var(--header-color);
+}
+
+h3, p, a {
+    color: var(--text-color);
+}
+a {
+    text-decoration: none;
+    font-style: var(--link-font-style);
+}
+p {
+    text-align: var(--text-align);
+}
+a:hover {
+    color: var(--link-hover-color);
+}
+
+
+/* BUTTONS */
+
+.btn-wrap {
+    margin: var(--block-margin);
+    width: 312px;
+    display: flex;
+    justify-content: space-between;
+}
+.button {
+    width: var(--btn-width);
+    height: var(--btn-height);
+    font: var(--main-font-family);
+    font-size: var(--btn-font-size);
+    border-radius: var(--btn-border-radius);
+    color: var(--white-color);
+    border: var(--btn-border);
+    box-shadow: var(--btn-box-shadow);
+}
+.button:hover {
+    box-shadow: none;
+}
+.btn-acc {
+    background-color: var(--btn-color);
+}
+.btn-acc:hover {
+    background-color: var(--btn-color-hover);
+}
+.btn-rej {
+    background-color: var(--alert-color);
+}
+.btn-rej:hover {
+    background-color: var(--alert-color-hover);
+}
+.btn-dis {
+    background-color: var(--disabled-color);
+}
+.btn-dis:hover {
+    background-color: var(--disabled-color-hover);
+}
+
+
+/* COLORS EXAMPLE */
+
+.colors-wrap {
+    display: flex;
+}
+.color {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    border: var(--white-color) solid 2px;
+}
+.color1 {
+    background-color: var(--header-color);
+}
+.color2 {
+    background-color: var(--text-color);
+}
+.color3 {
+    background-color: var(--background-color);
+}
+.color4 {
+    background-color: var(--link-hover-color);
+}
+
+
+.photo {
+    width: var(--photo-size);
+    height: var(--photo-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    background-image: url(../img/photo.jpg);
+    background-size: cover;
+    border-radius: var(--photo-border-radius);
+}
+
+
+/* TABLE */
+
+table {
+    border-collapse: var(--table-border-collapse);
+    background-color: var(--table-background-color);
+    box-shadow: var(--table-box-shadow);
+}
+
+th, td {
+    padding: var(--table-padding);
+}
+th {
+    background-color: var(--table-header-color);
+    color: var(--white-color);
+}
+tr:nth-child(2n) {
+    background-color: var(--table-row-color);
+}
+tr:hover {
+    background-color: var(--table-row-color-hover);
+}
