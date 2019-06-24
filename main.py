@@ -3,7 +3,8 @@ from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
 
 def creating_db(data, password):
-
+    """This function gets the list of data and then opens
+    postgre database and creates a new database."""
     db_name = data[0]
     con = psycopg2.connect(
         database="postgres",
@@ -21,24 +22,14 @@ def creating_db(data, password):
 
 
 def creating_tables(data, password):
-
-    field_list = []
-    type_list = []
-
+    """This function gets the list of data and creates
+    tables with fields and relations"""
     db_name = data.pop(0).lower()
-
+    string = ''
     for item in data:
-        table_name = item[0]
-        type_list = item[2::2]
-        field_list = item[1::2]
-        string = ''
-        list_of_parametres = []
+        table_name = item.pop(0)
 
-        for element in range(len(field_list)):
-            string = field_list[element] + " " + type_list[element]
-            list_of_parametres.append(string)
-
-        newstr = ", ".join(list_of_parametres)
+        newstr = ", ".join(item)
 
         con = psycopg2.connect(
             database=db_name,
@@ -60,17 +51,19 @@ def creating_tables(data, password):
 
 
 def getting_data():
-
+    """This function gets data from the file and returns
+    it as a list of data."""
+    raw_data = []
     list_of_data = []
-    file = open('db.txt')  # openning file for reading
 
+    file = open('db.txt')
     for line in file:
         data = line.strip()
+        raw_data.append(data)
 
-    splitted_data = data.split(';')
-    db_name = splitted_data.pop(0)
+    db_name = raw_data.pop(0)
 
-    for item in splitted_data:
+    for item in raw_data:
         list_of_splitted_data = item.split(', ')
         list_of_data.append(list_of_splitted_data)
 
@@ -80,7 +73,7 @@ def getting_data():
 
 
 if __name__ == '__main__':
-    password = "SAMIYSLOZHNIYPAROL"  # Write the password to the DB here
+    password = "PASSWORD"  # Write the password to the DB here
     data = getting_data()
     db = creating_db(data, password)
     tables = creating_tables(data, password)
