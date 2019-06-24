@@ -1,0 +1,14 @@
+Таблица: customers [firstname, lastname, email, age]
+27, Cortez, Murazik, abbott.patrick@example.org, 30
+28, Merritt, Berge, schamberger.may@example.com, 25
+29, Jayson, Becker, gtowne@example.com, 43
+30, Raphaelle, Blick, hlakin@example.net, 47
+31, Fernando, Harvey, cstokes@example.com, 24
+32, Lupe, Schultz, swift.carey@example.com, 27
+33, Arne, Swaniawski, price.deven@example.com, 34
+34, Felix, Hickle, iboehm@example.com, 46
+35, Hallie, Rogahn, towne.noel@example.com, 32
+36, Antonia, Ziemann, fhartmann@example.com, 28
+Таблица: Books [title]
+Book4
+Book5
