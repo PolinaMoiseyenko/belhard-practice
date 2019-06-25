@@ -45,13 +45,14 @@ def filling_table(check, parse_table, parse_columns, data):
 	parse_columns = parse_columns.split(', ')
 	while col < len(parse_columns):
 		while def_val < len(columns_db_default):	
-			if columns_db_default[def_val] is not None:
+			if columns_db_default[def_val] is not None and columns_db_names[def_val] not in parse_columns:
 				parse_columns.insert(def_val, columns_db_names[def_val])
 				data = data.split(', ')
 				data.insert(def_val, 'DEFAULT')
 				data = ', '.join(data)
 			def_val += 1
 		col += 1
+	parse_columns = map(lambda column: '"' + column + '"', parse_columns)
 	parse_columns = ', '.join(parse_columns)
 	
 	
